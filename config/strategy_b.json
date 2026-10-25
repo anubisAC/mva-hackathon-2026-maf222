@@ -1,0 +1,9 @@
+{
+  "name": "Genome wide evidence and allele specific rescue",
+  "track1": "Screen all eligible canonical nuclear protein-coding transcripts, score exact public HPO associations and source-labeled germline ClinVar evidence, distinguish biallelic hypotheses from incomplete recessive findings, and rerank under evidence removal.",
+  "track2": "Conditionally investigate restoration of the baseline-nominated BUB1B allele's function using sequence-derived stop context, predicted nonsense-mediated decay, amino-acid fidelity, phase, current medicinal approval and phenotype-related concerns.",
+  "mechanism_gene": "BUB1B",
+  "selection_disclosure": "The mechanism gene was nominated by strategy A. The genome-wide strategy B gene search does not use that gene name as an inclusion filter. The second analysis is not blinded.",
+  "comparison_policy": "Compare scope, source coverage, ranking robustness, mechanistic specificity and testable validation plans. Do not claim a higher contest score, drug efficacy, independent replication or winning probability.",
+  "frozen_before_first_full_run": true
+}

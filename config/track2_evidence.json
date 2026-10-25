@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-17",
+  "case_linkage": "No causal variant has been established by this literature module. BUB1B, CEP57 and TRIP13 are conditional mechanism branches, not findings in this participant. Add the locally reviewed Track 1 allele/transcript evidence before narrowing the branch. No measured gene-expression signature is available in this ledger; disease-gene lists and regulator enrichment must not be labeled measured up/down regulation.",
+  "ai_disclosure": {
+    "provider": "OpenAI Codex",
+    "plan_or_tier": null,
+    "data_handling_setting": null
+  },
+  "requirement_source_ids": ["track2_requirements", "official_overview"],
+  "submission_requirements": [
+    "Submit a PDF or Markdown report explaining variant loss/gain of function, disrupted pathway, downstream consequence, and drug rationale; include the team/username in the filename.",
+    "Supply reproducible code and configuration in a GitHub repository; the repository must become public after the hackathon.",
+    "Supply a three-minute YouTube or Vimeo pitch video and identify one team submitter.",
+    "Track 2 uses expert qualitative review; only the latest entry is reviewed. The live official page currently permits three submissions per team.",
+    "Record the actual AI provider, plan/tier, and data-handling setting; do not infer account terms."
+  ],
+  "sources": {
+    "official_overview": {
+      "title": "Official Rare Disease, Real Kid MVA Hackathon overview",
+      "url": "https://sagebio-rare-disease-real-kid-mva-hackathon-2026.hf.space/",
+      "kind": "official_requirements",
+      "accessed_on": "2026-10-17",
+      "supports": "Track 2 seeks existing approved medications as follow-up hypotheses; three-submission limit."
+    },
+    "track2_requirements": {
+      "title": "Official Track 2 submission requirements",
+      "url": "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026/raw/main/tabs/submit_track2.py",
+      "kind": "official_requirements",
+      "accessed_on": "2026-10-17",
+      "supports": "Required report, variant mechanism, repository, video, AI disclosure and latest-entry review."
+    },
+    "bubr1_mva": {
+      "title": "Molecular Causes for BUBR1 Dysfunction in the Human Cancer Predisposition Syndrome Mosaic Variegated Aneuploidy (2010)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887387/",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "Allele-dependent BUBR1 dysfunction in MVA; no drug efficacy inference."
+    },
+    "cep57_mva": {
+      "title": "Snape et al. Mutations in CEP57 cause mosaic variegated aneuploidy syndrome (2011)",
+      "url": "https://www.nature.com/articles/ng.822",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "Biallelic CEP57 loss of function and centrosome/microtubule biology."
+    },
+    "trip13_mva": {
+      "title": "Yost et al. Biallelic TRIP13 mutations predispose to Wilms tumor and chromosome missegregation (2017)",
+      "url": "https://www.nature.com/articles/ng.3883",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "TRIP13 loss, spindle-checkpoint impairment and genetic rescue in patient-derived cells."
+    },
+    "nac_replication": {
+      "title": "Slow Replication Fork Velocity of Homologous Recombination-Defective Cells Results from Endogenous Oxidative Stress (2016)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4852921/",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "NAC restored replication speed and reduced extra centrosomes in homologous-recombination-defective hamster cells; not an MVA model."
+    },
+    "nac_cancer": {
+      "title": "Sayin et al. Antioxidants accelerate lung cancer progression in mice (2014)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24477002/",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "NAC-associated tumor acceleration in oncogene-driven mouse lung models supplies counter-evidence, not a quantified MVA risk."
+    },
+    "nac_fda": {
+      "title": "FDA ACETADOTE prescribing information, revised July 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021539s021lbl.pdf",
+      "kind": "regulatory",
+      "accessed_on": "2026-10-17",
+      "supports": "US acetylcysteine injection approval for acetaminophen-associated hepatic injury; hypersensitivity and fluid-overload warnings."
+    },
+    "rapamycin_sasp": {
+      "title": "Laberge et al. MTOR regulates the pro-tumorigenic senescence-associated secretory phenotype by promoting IL1A translation (2015)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4691706/",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "Rapamycin suppressed SASP cytokines in experimentally senescent cells, not restoration of MVA chromosome segregation."
+    },
+    "sirolimus_label": {
+      "title": "Pfizer RAPAMUNE US prescribing information",
+      "url": "https://labeling.pfizer.com/showlabeling.aspx?id=139",
+      "kind": "regulatory",
+      "accessed_on": "2026-10-17",
+      "supports": "US sirolimus indications include kidney-transplant rejection prophylaxis and lymphangioleiomyomatosis; immunosuppression and impaired wound-healing concerns."
+    },
+    "colchicine_fda": {
+      "title": "FDA colchicine capsules prescribing information (2023)",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/204820Orig1s004lbl.pdf",
+      "kind": "regulatory",
+      "accessed_on": "2026-10-17",
+      "supports": "US approval for gout-flare prophylaxis; tubulin polymerization disruption and nonclinical aneuploidy via mitotic nondisjunction. Historical label establishes approval, not a comprehensive current safety review."
+    },
+    "sirt2_bubr1": {
+      "title": "North et al. SIRT2 induces the checkpoint kinase BubR1 to increase lifespan (2014)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4194088/",
+      "kind": "primary_study",
+      "accessed_on": "2026-10-17",
+      "supports": "SIRT2 stabilizes BubR1; NMN increased BubR1 abundance in mice. Lifespan evidence was from SIRT2 overexpression, not proof of NMN treatment efficacy in MVA."
+    }
+  },
+  "mechanisms": [
+    {
+      "gene": "BUB1B",
+      "description": "Some pathogenic alleles impair the abundance or function of BUBR1, a spindle-checkpoint component. Establish whether the specific allele leaves functional residual protein before considering stabilization. Protein abundance alone is insufficient to show checkpoint rescue.",
+      "required_direction": "Restore demonstrated checkpoint dysfunction; avoid weakening checkpoint activity or assuming every missense allele has the same effect.",
+      "source_ids": ["bubr1_mva"]
+    },
+    {
+      "gene": "CEP57",
+      "description": "Biallelic loss-of-function variants can disrupt centrosomal functions associated with microtubule organization and chromosome-number maintenance. This branch must be experimentally distinguished from a primary checkpoint defect.",
+      "required_direction": "Restore the affected centrosome/spindle function, not indiscriminate microtubule inhibition.",
+      "source_ids": ["cep57_mva"]
+    },
+    {
+      "gene": "TRIP13",
+      "description": "In reported patient-derived cells, biallelic loss of TRIP13 impaired the spindle assembly checkpoint and chromosome segregation; restoration of TRIP13 rescued these defects. Cancer-cell strategies that inhibit TRIP13 cannot be imported as rescue hypotheses for inherited loss of function.",
+      "required_direction": "Recover the allele-specific checkpoint defect; do not infer desired inhibition from tumor overexpression studies.",
+      "source_ids": ["trip13_mva"]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "acetylcysteine",
+      "name": "Acetylcysteine (NAC)",
+      "scope": "downstream_stress_hypothesis",
+      "direction": "uncertain",
+      "mechanism_action": "Redox modulation through a cysteine/glutathione-related mechanism; not replacement of a missing spindle-checkpoint protein.",
+      "rationale": "A conditional cellular experiment could ask whether independently measured oxidative stress contributes to replication stress in the relevant MVA model. NAC improved replication-related phenotypes in homologous-recombination-defective hamster cells, a different disease mechanism. This evidence supports an assay hypothesis only.",
+      "approval": {
+        "jurisdiction": "United States (FDA)",
+        "status": "approved",
+        "formulation": "Acetylcysteine injection (ACETADOTE)",
+        "indication": "Prevention or reduction of hepatic injury following potentially hepatotoxic acetaminophen ingestion",
+        "source_ids": ["nac_fda"]
+      },
+      "source_ids": ["nac_replication", "nac_cancer"],
+      "uncertainties": [
+        "No MVA rescue or human MVA efficacy evidence is established in this ledger; oxidative stress in the relevant cells is unmeasured.",
+        "NAC accelerated progression in oncogene-driven lung-cancer mouse models. This counter-evidence matters when considering a cancer-predisposition syndrome, but cannot quantify risk in MVA.",
+        "Reduced stress markers could coexist with persistence or expansion of abnormal clones. Regulatory approval of an acute-use formulation does not establish suitability for chronic research translation.",
+        "The cited label includes serious hypersensitivity and fluid-overload warnings. Exposure, tissue penetration, formulation and interactions need independent review."
+      ],
+      "gates": {
+        "variant_mechanism": {"status": "pending", "reason": "Causal allele and downstream cellular consequence are unverified."},
+        "pathway_activation": {"status": "pending", "reason": "Measure oxidative stress and replication-fork phenotype first."},
+        "functional_rescue": {"status": "pending", "reason": "No relevant MVA-model rescue measured."},
+        "genome_safety": {"status": "pending", "reason": "Exclude abnormal-clone expansion and assess p53-associated responses."},
+        "exposure_feasibility": {"status": "pending", "reason": "No relevant tissue exposure or formulation bridge established."}
+      },
+      "validation": [{
+        "question": "Does a redox-associated component of replication stress contribute causally to the cell phenotype?",
+        "design": "Compare variant-bearing cells, isogenic correction and matched control cells, with vehicle and an orthogonal redox perturbation; blind imaging and include independent biological replicates. An exposure-ranging laboratory design requires specialist review.",
+        "readouts": "Redox assays, DNA-fiber measures, viable-cell counts, live mitotic lineages, micronuclei, karyotype, checkpoint function, and longitudinal abnormal-clone abundance.",
+        "falsification": "Reject the hypothesis if target engagement fails, if stress changes without improved segregation, if apparent improvement is explained by killing/cytostasis, or if abnormal clones expand."
+      }]
+    },
+    {
+      "id": "sirolimus",
+      "name": "Sirolimus (rapamycin)",
+      "scope": "downstream_stress_hypothesis",
+      "direction": "uncertain",
+      "mechanism_action": "Inhibits mTORC1; may modify a measured senescence-associated secretory phenotype rather than correct the causal segregation defect.",
+      "rationale": "Rapamycin suppressed inflammatory secretion in experimentally senescent human cells. A relevance test is justified only if the case model independently shows an mTOR-linked secretory phenotype. Suppressing cytokines is not evidence of restored chromosome segregation or development.",
+      "approval": {
+        "jurisdiction": "United States (FDA)",
+        "status": "approved",
+        "formulation": "RAPAMUNE oral solution/tablets",
+        "indication": "Kidney-transplant organ-rejection prophylaxis and lymphangioleiomyomatosis, under the label's population restrictions",
+        "source_ids": ["sirolimus_label"]
+      },
+      "source_ids": ["rapamycin_sasp"],
+      "uncertainties": [
+        "The primary evidence involves induced senescence, not MVA cells or patient treatment.",
+        "No mTOR activation or causal secretory phenotype is established in this case; enrichment of pathway genes would not establish either.",
+        "Immunosuppression, infection susceptibility, impaired wound healing, growth effects and exposure interactions complicate translation; existing approval does not solve these issues.",
+        "Cell-cycle slowing can create a misleading drop in mitotic-error counts; compare error frequency per completed division and track growth."
+      ],
+      "gates": {
+        "variant_mechanism": {"status": "pending", "reason": "No allele-to-senescence causal link established."},
+        "pathway_activation": {"status": "pending", "reason": "Measure mTOR activity and secretory phenotype independently."},
+        "functional_rescue": {"status": "pending", "reason": "No relevant functional rescue measured."},
+        "genome_safety": {"status": "pending", "reason": "Exclude cytostasis artifacts, checkpoint bypass and abnormal-clone selection."},
+        "exposure_feasibility": {"status": "pending", "reason": "No relevant exposure/translation bridge established."}
+      },
+      "validation": [{
+        "question": "Does mTOR-dependent secretion cause a reversible downstream phenotype?",
+        "design": "Use matched variant/corrected cultures and conditioned-medium transfer, with vehicle and an orthogonal mTOR perturbation. Include proliferation-matched controls and blind analysis.",
+        "readouts": "mTOR target engagement, cytokine secretion, conditioned-medium effects, viable-cell yield, division-normalized segregation errors and clonal karyotypes.",
+        "falsification": "Deprioritize if baseline pathway activation is absent, secretory changes do not improve function, or improvements disappear after controlling for proliferation; reject if genomic stability worsens."
+      }]
+    },
+    {
+      "id": "colchicine",
+      "name": "Colchicine",
+      "scope": "excluded_control",
+      "direction": "opposed",
+      "mechanism_action": "Disrupts microtubule polymerization; the FDA label describes induction of aneuploidy through mitotic nondisjunction.",
+      "rationale": "An anti-inflammatory association or a shared pathway annotation cannot justify a chromosome-segregation rescue claim. Its documented mechanism opposes the proposed objective of preserving mitotic fidelity.",
+      "exclusion_reason": "Exclude from disease-rescue shortlist because antimitotic action and labeled nonclinical aneuploidy provide a concrete mechanism conflict.",
+      "approval": {
+        "jurisdiction": "United States (FDA)",
+        "status": "approved",
+        "formulation": "Colchicine capsules",
+        "indication": "Gout-flare prophylaxis in adults",
+        "source_ids": ["colchicine_fda"]
+      },
+      "source_ids": ["colchicine_fda"],
+      "uncertainties": [
+        "Rejection applies to the proposed MVA disease-rescue purpose, not to every approved use.",
+        "The historical label is sufficient to document the direction conflict; no claim of comprehensive current label review is made."
+      ],
+      "gates": {
+        "variant_mechanism": {"status": "pending", "reason": "The case allele is unverified, and no rescue mechanism is established."},
+        "pathway_activation": {"status": "pending", "reason": "No case-specific inflammatory indication established."},
+        "functional_rescue": {"status": "pending", "reason": "No disease-rescue evidence."},
+        "genome_safety": {"status": "fail", "reason": "Regulatory nonclinical evidence describes aneuploidy through mitotic nondisjunction.", "source_ids": ["colchicine_fda"]},
+        "exposure_feasibility": {"status": "pending", "reason": "Not pursued following direction conflict."}
+      },
+      "validation": [{
+        "question": "Can the triage workflow identify an adverse mechanism despite shared pathway annotations?",
+        "design": "Use colchicine as a documentary negative control for direction-of-effect review, not a treatment candidate; inspect the regulatory mechanism and nonclinical evidence.",
+        "readouts": "Recorded tubulin effect, chromosome-segregation direction and exclusion reason.",
+        "falsification": "The triage workflow fails if an annotation overlap or hypothetical anti-inflammatory benefit overrides the documented antimitotic conflict."
+      }]
+    },
+    {
+      "id": "nicotinamide_mononucleotide",
+      "name": "Nicotinamide mononucleotide (NMN; mechanistic comparator)",
+      "scope": "disease_modifying_hypothesis",
+      "direction": "uncertain",
+      "mechanism_action": "NAD precursor studied in the SIRT2/BubR1 stability pathway; not interchangeable with nicotinamide, which inhibited sirtuins in the cited experiments.",
+      "rationale": "The study increased BubR1 abundance with NMN in mice and extended lifespan through genetic SIRT2 overexpression. These are distinct experiments; neither demonstrates NMN efficacy in human MVA. A residual-functional-BUBR1 hypothesis would not generalize to absent protein, CEP57 loss or TRIP13 loss.",
+      "approval": {
+        "jurisdiction": "United States (FDA; verification incomplete)",
+        "status": "unverified",
+        "formulation": "No approved medicinal formulation established in this ledger",
+        "indication": "No approved drug indication established here; supplement availability is not evidence of medicinal approval",
+        "source_ids": []
+      },
+      "source_ids": ["sirt2_bubr1"],
+      "uncertainties": [
+        "Retained as a mechanistic comparator, outside the approved-drug shortlist unless authoritative medicinal approval is verified.",
+        "More protein does not ensure that a mutant protein works. The implicated allele must retain relevant activity.",
+        "Do not substitute nicotinamide for NMN: the cited cell experiments found nicotinamide decreased BubR1 abundance."
+      ],
+      "gates": {
+        "variant_mechanism": {"status": "pending", "reason": "Requires a BUB1B-specific residual-protein mechanism, not merely an MVA label."},
+        "pathway_activation": {"status": "pending", "reason": "NAD/SIRT2 limitation is not demonstrated in the relevant cells."},
+        "functional_rescue": {"status": "pending", "reason": "No allele-specific checkpoint or segregation rescue measured."},
+        "genome_safety": {"status": "pending", "reason": "Need to exclude stabilization of nonfunctional protein and clonal adverse effects."},
+        "exposure_feasibility": {"status": "pending", "reason": "Drug approval and a clinically relevant exposure bridge remain unverified."}
+      },
+      "validation": [{
+        "question": "Is residual functional BUBR1 destabilization reversible through SIRT2 in the relevant model?",
+        "design": "First measure allele-specific abundance and checkpoint function; compare genetic SIRT2 perturbation with isogenic correction and appropriate controls. Keep the NMN arm exploratory until approval status is verified.",
+        "readouts": "BUBR1 abundance/stability, SIRT2 engagement, checkpoint response, mitotic lineage errors and viable-cell karyotypes.",
+        "falsification": "Reject this branch if BUBR1 is absent or functionally irrecoverable, if abundance changes without checkpoint rescue, or if the causal gene belongs to a different mechanism."
+      }]
+    }
+  ]
+}

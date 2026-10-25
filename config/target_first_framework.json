@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "design_date": "2026-10-20",
+  "status": "initial_unfitted_mechanistic_framework",
+  "objective": "Identify intervention targets from the variant-to-phenotype causal model before selecting drugs.",
+  "arms": ["healthy_tissue_rescue", "tumor_control"],
+  "objective_combination": "Report separately. No weighted composite, automatic tumor selectivity, or efficacy probability.",
+  "selection_policy": "The previous four-drug comparison is historical supporting work. No drug has a reserved lead position in this framework.",
+  "patient_inputs": {
+    "phenotype": "outputs/strategy_b/context/phenotype.json",
+    "variants": "outputs/strategy_b/context/candidates.json",
+    "allele_context": "outputs/strategy_b/track2/variant_context.json"
+  },
+  "phenotype_endpoint_map": [
+    {
+      "hpo_ids": ["HP:0002859"],
+      "observed": "Rhabdomyosarcoma",
+      "arm": "tumor_control",
+      "desired_endpoint": "Lower tumor clonogenic survival without increasing segregation errors or loss of useful function in nonmalignant cells.",
+      "causal_hypothesis": "Some RMS models depend on FOXM1/BUBR1; this patient's tumor dependency and somatic genotype are unknown.",
+      "priority_basis": "Directly documented tumor, not a generic aging phenotype.",
+      "modeled_now": "Potential change in BUBR1-dependent molecular support only; tumor survival is not fitted."
+    },
+    {
+      "hpo_ids": ["HP:0004322", "HP:0001508", "HP:0003202"],
+      "observed": "Short stature, failure to thrive and reduced muscle bulk",
+      "arm": "healthy_tissue_rescue",
+      "desired_endpoint": "Preserve chromosome segregation and productive tissue maintenance; examine muscle anabolic/catabolic balance separately.",
+      "causal_hypothesis": "Checkpoint/attachment defects may impair progenitor function. Excess mTORC1 or other downstream stress is a competing, unmeasured explanation.",
+      "priority_basis": "Treat overlapping growth features as one clinical cluster, not three independent confirmations.",
+      "modeled_now": "Residual BUBR1 function and attachment-balance proxies; muscle mass and growth are not fitted."
+    },
+    {
+      "hpo_ids": ["HP:0001622", "HP:0001518"],
+      "observed": "Prematurity and small for gestational age",
+      "arm": "healthy_tissue_rescue",
+      "desired_endpoint": "Developmental context for target choice; no claim of reversing completed prenatal events.",
+      "causal_hypothesis": "Compatible with developmental impairment but not sufficient to identify a druggable pathway.",
+      "modeled_now": "Context only."
+    },
+    {
+      "hpo_ids": ["HP:0000121"],
+      "observed": "Congenital nephrocalcinosis",
+      "arm": "healthy_tissue_rescue",
+      "desired_endpoint": "Understand mineral-handling mechanism before assigning a renal target.",
+      "causal_hypothesis": "Unresolved; nephrocalcinosis does not establish renal failure or a BUB1B-to-calcium causal link.",
+      "modeled_now": "Unassigned target; do not force into the mitotic model."
+    }
+  ],
+  "targets": [
+    {
+      "id": "bubr1_abundance",
+      "target": "Useful residual BUBR1 abundance",
+      "genes": ["BUB1B"],
+      "desired_action": "increase",
+      "priority": "core_variant_proximal",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["residual_stabilization", "wild_type_addback"],
+      "condition": "A sufficiently functional residual protein must exist for stabilization.",
+      "tumor_concern": "Potential support of a BUBR1-dependent tumor.",
+      "source_ids": ["mva_function", "sirt2_bubr1"],
+      "drug_match_rule": "Direct BUB1B binding with a positive functional action is required for a direct match; indirect routes are separate."
+    },
+    {
+      "id": "bubr1_conformation",
+      "target": "BUBR1 checkpoint and attachment functions",
+      "genes": ["BUB1B"],
+      "desired_action": "restore_function",
+      "priority": "core_variant_proximal",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["residual_function_restore"],
+      "condition": "Test stability loss and intrinsic functional loss as different missense mechanisms.",
+      "tumor_concern": "Potential increase in tumor mitotic competence.",
+      "source_ids": ["mva_function", "pseudokinase_pp2a"],
+      "drug_match_rule": "Binding or inhibition alone does not establish conformational rescue."
+    },
+    {
+      "id": "sirt2_turnover",
+      "target": "SIRT2-dependent BUBR1 turnover",
+      "genes": ["SIRT2"],
+      "desired_action": "increase",
+      "priority": "conditional_upstream_route",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["residual_stabilization"],
+      "condition": "SIRT2 activity must limit useful BUBR1 turnover; this link does not determine a niacin effect size.",
+      "tumor_concern": "The same preservation route could support malignant cells; other SIRT2 substrates matter.",
+      "source_ids": ["sirt2_bubr1", "sirt2_k250"],
+      "drug_match_rule": "A direct SIRT2 activator is different from an NAD+ precursor."
+    },
+    {
+      "id": "stop_rna",
+      "target": "Availability of premature-stop BUB1B transcript",
+      "genes": ["SMG1", "UPF1"],
+      "desired_action": "decrease",
+      "priority": "conditional_variant_proximal",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["nmd_attenuation"],
+      "condition": "More RNA is useful only if its truncated or readthrough product has useful function.",
+      "tumor_concern": "Global NMD perturbation affects many transcripts; those consequences are outside the initial model.",
+      "source_ids": ["mva_function"],
+      "drug_match_rule": "An NMD regulator interaction is a route hypothesis, not proof of allele-selective RNA rescue."
+    },
+    {
+      "id": "stop_readthrough",
+      "target": "Premature-stop translation bypass",
+      "genes": [],
+      "desired_action": "increase",
+      "priority": "conditional_variant_proximal",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["readthrough"],
+      "condition": "Surviving transcript and a functional readthrough product are required.",
+      "tumor_concern": "Normal-stop and transcriptome effects are not represented in the initial protein model.",
+      "source_ids": ["readthrough_identity"],
+      "drug_match_rule": "Requires a readthrough activity assay; generic ribosome or termination-factor binding is insufficient."
+    },
+    {
+      "id": "kinetochore_pp2a",
+      "target": "PP2A-B56 recruitment at the kinetochore",
+      "genes": ["PPP2R5A", "PPP2R5B", "PPP2R5C", "PPP2R5D", "PPP2R5E"],
+      "desired_action": "increase_local_recruitment",
+      "priority": "core_functional_bypass",
+      "arm": "healthy_tissue_rescue",
+      "interventions": ["local_pp2a_bypass"],
+      "condition": "Local recruitment and global PP2A activation are not equivalent. Attachment repair does not automatically repair checkpoint signaling.",
+      "tumor_concern": "Better attachment control could also support tumor cells.",
+      "source_ids": ["pp2a_recruitment", "pseudokinase_pp2a"],
+      "drug_match_rule": "Complex membership or global phosphatase modulation cannot establish local B56 recruitment."
+    },
+    {
+      "id": "aurora_balance",
+      "target": "Aurora B relative to kinetochore PP2A-B56",
+      "genes": ["AURKB"],
+      "desired_action": "decrease",
+      "priority": "conditional_balance_target",
+      "arm": "both",
+      "interventions": ["aurora_b_reduction"],
+      "condition": "Partial correction may help a phosphatase-deficient state; excessive inhibition can worsen attachments. Cytokinesis is an additional unmodeled endpoint.",
+      "tumor_concern": "Normal and malignant cells can have different kinase-phosphatase balance.",
+      "source_ids": ["pp2a_recruitment", "pseudokinase_pp2a"],
+      "drug_match_rule": "Inhibition is directionally compatible only under the excess-Aurora hypothesis; potency, selectivity and exposure remain separate."
+    },
+    {
+      "id": "apc_cdc20",
+      "target": "APC/C-CDC20 mitotic exit control",
+      "genes": ["CDC20"],
+      "desired_action": "decrease",
+      "priority": "experimental_timing_target",
+      "arm": "both",
+      "interventions": ["apc_cdc20_reduction"],
+      "condition": "More time for attachment may compete with prolonged arrest or context-dependent slippage.",
+      "tumor_concern": "Blocking division may affect both tumor and growing normal tissue.",
+      "source_ids": ["mcc_cdc20", "apc_inhibition", "apcin_paradox"],
+      "drug_match_rule": "Target-level inhibition cannot predict the net effect of a particular binding mode on the checkpoint."
+    },
+    {
+      "id": "foxm1_tumor",
+      "target": "FOXM1-dependent tumor program",
+      "genes": ["FOXM1"],
+      "desired_action": "decrease",
+      "priority": "tumor_dependency_hypothesis",
+      "arm": "tumor_control",
+      "interventions": [],
+      "condition": "Requires tumor-specific dependency evidence; broader FOXM1 outputs are not simulated.",
+      "tumor_concern": "Suppressing FOXM1/BUBR1 systemically could oppose normal-tissue rescue.",
+      "source_ids": ["rms_dependency"],
+      "drug_match_rule": "A direct FOXM1 interaction and tumor dependency must be distinguished from nonspecific cytotoxicity."
+    },
+    {
+      "id": "mtorc1_muscle",
+      "target": "mTORC1 activity in muscle and tumor",
+      "genes": ["MTOR", "RPTOR"],
+      "desired_action": "decrease",
+      "priority": "exploratory_phenotype_branch",
+      "arm": "both",
+      "interventions": [],
+      "condition": "Inhibition is proposed only if excessive activity drives dysfunction. Low muscle mass alone does not establish hyperactive mTORC1.",
+      "tumor_concern": "Muscle anabolism and tumor growth may respond differently.",
+      "source_ids": ["allelic_muscle"],
+      "drug_match_rule": "An mTOR complex interaction is retained as complex-level evidence, not proof of direct RPTOR binding."
+    }
+  ],
+  "sources": {
+    "mva_function": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887387/",
+    "pp2a_recruitment": "https://pubmed.ncbi.nlm.nih.gov/23789096/",
+    "pseudokinase_pp2a": "https://www.sciencedirect.com/science/article/pii/S2211124720313863",
+    "mcc_cdc20": "https://www.nature.com/articles/nature13911",
+    "apc_inhibition": "https://www.nature.com/articles/nature13660",
+    "apcin_paradox": "https://www.nature.com/articles/s41589-020-0495-z",
+    "rms_dependency": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3500453/",
+    "allelic_muscle": "https://www.jci.org/articles/view/126863",
+    "sirt2_bubr1": "https://pubmed.ncbi.nlm.nih.gov/24825348/",
+    "sirt2_k250": "https://pubmed.ncbi.nlm.nih.gov/25285631/",
+    "readthrough_identity": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098639/"
+  },
+  "simulation": {
+    "status": "unfitted_scenario_experiments",
+    "parameter_interpretation": "Dimensionless analyst-selected ranges for sensitivity experiments, not patient measurements or probability distributions.",
+    "seed": 20261020,
+    "samples_per_allele_scenario": 128,
+    "strengths": [0, 0.25, 0.5, 0.75, 0.95],
+    "time": 5,
+    "time_unit": "multiples of the reference protein mean lifetime; no conversion to hours",
+    "allele_scenarios": ["trans_unstable_residual", "trans_stable_dysfunctional", "trans_stable_partial_function", "cis_with_reference_allele"],
+    "tumor_states": ["same_residual_state", "residual_overexpression_state"],
+    "interventions": ["vehicle", "residual_stabilization", "residual_function_restore", "nmd_attenuation", "readthrough", "local_pp2a_bypass", "aurora_b_reduction", "apc_cdc20_reduction", "bubr1_suppression", "wild_type_addback"],
+    "shared_ranges": {
+      "stop_rna_fraction": [0.01, 0.2],
+      "stop_degradation": [1, 6],
+      "stop_checkpoint_function": [0, 0.5],
+      "stop_attachment_function": [0, 0.5],
+      "readthrough_degradation": [1, 6],
+      "readthrough_checkpoint_function": [0, 1],
+      "readthrough_attachment_function": [0, 1],
+      "stabilizable_fraction": [0, 1],
+      "balance_width": [0.5, 2],
+      "tumor_synthesis_multiplier": [2, 4]
+    },
+    "scenario_ranges": {
+      "trans_unstable_residual": {"missense_degradation": [2, 8], "missense_checkpoint_function": [0.4, 1], "missense_attachment_function": [0.2, 1]},
+      "trans_stable_dysfunctional": {"missense_degradation": [0.8, 1.2], "missense_checkpoint_function": [0, 0.2], "missense_attachment_function": [0, 0.2]},
+      "trans_stable_partial_function": {"missense_degradation": [0.8, 1.2], "missense_checkpoint_function": [0.4, 1], "missense_attachment_function": [0.4, 1]},
+      "cis_with_reference_allele": {"missense_degradation": [2, 8], "missense_checkpoint_function": [0, 0.5], "missense_attachment_function": [0, 0.5]}
+    },
+    "readouts": ["total_bubr1", "checkpoint_equivalent_bubr1", "attachment_equivalent_bubr1", "attachment_balance_proxy", "checkpoint_braking_proxy", "exit_capacity_proxy"],
+    "readout_limits": "These are molecular proxies. Tumor clonogenic survival, normal-tissue growth, muscle mass, renal physiology and drug efficacy are not fitted.",
+    "drug_adapter": "A drug needs a signed target effect and a compatible concentration-response assay. A binding Kd alone is not an EC50 or an Emax. Missing pharmacology stays unresolved.",
+    "cross_cell_data_role": "Existing public BUB1B signatures challenge downstream hypotheses; do not treat them as measured patient kinetic parameters."
+  },
+  "catalog_mapping": {
+    "input": "references/drug_screen/catalog.json",
+    "scope": "All cached ChEMBL phase-four records; collapse exact parent families while retaining member identities and warnings.",
+    "interpretation": "Mechanism coverage and direction only. Phase four does not verify current approval. Matches are not simulated drugs or treatment nominations.",
+    "direct_match": "Human SINGLE PROTEIN, exactly one unambiguous gene, direct_interaction=1, and an action compatible with the desired intervention.",
+    "complex_match": "Retain as contextual evidence only, without assigning binding to individual components.",
+    "old_candidates": "Not supplied as inputs, priors, forced members, or labels to the target matching stage."
+  }
+}

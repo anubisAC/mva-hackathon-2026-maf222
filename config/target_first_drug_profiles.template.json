@@ -1,0 +1,21 @@
+{
+  "purpose": "Copy and fill from measured functional target assays and an explicit free-exposure scenario. Nulls are deliberately unresolved. This file contains no measured drug response.",
+  "profiles": [
+    {
+      "drug_id": null,
+      "chemical_identity": null,
+      "target_id": "aurora_balance",
+      "intervention": "aurora_b_reduction",
+      "assay_type": "functional_target_response",
+      "source_url": null,
+      "assay_context": null,
+      "evidence_status": null,
+      "concentration_unit": null,
+      "exposure_basis": "free_intracellular",
+      "free_concentrations": [],
+      "ec50": null,
+      "emax": null,
+      "hill": null
+    }
+  ]
+}

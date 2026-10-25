@@ -1,0 +1,12 @@
+{
+  "species": "Homo sapiens",
+  "aliases": [
+    {
+      "legacy": "CCDC84",
+      "current": "CENATAC",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/34009673/",
+      "evidence": "Primary study explicitly identifies CENATAC (CCDC84)."
+    }
+  ],
+  "policy": "Only explicitly documented exact aliases are applied; never silently convert across species or upper-case symbols."
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "fixed_for_next_analysis",
+  "selected_on": "2026-10-19",
+  "timezone": "America/New_York",
+  "selection_basis": "Explicit user selection of two leads and two contrasting mechanisms after broad screening and literature review.",
+  "contest_track": 2,
+  "comparison_question": "Which evidence supports downstream mitigation of aneuploidy-associated stress versus preservation or restoration of useful BUBR1 function?",
+  "source_decision": "outputs/contest_hypotheses/decision.json",
+  "output_directory": "outputs/main_comparison_2026-10-19",
+  "candidates": [
+    {
+      "drug": "sodium phenylbutyrate",
+      "display_name": "Sodium 4-phenylbutyrate",
+      "role": "lead",
+      "branch": "mitigation",
+      "mechanism": "Reduce protein aggregation and the resulting cellular stress associated with aneuploidy.",
+      "parent_chembl_id": "CHEMBL1469",
+      "medicinal_chembl_id": "CHEMBL1746",
+      "comparison_endpoint": "Protein aggregation, stress burden and retained cellular function.",
+      "inference_to_examine": "Protein-homeostasis effects reported in constitutional trisomy also address relevant stress in BUB1B-associated mosaic aneuploidy.",
+      "prediction_boundary": "The mitigation rationale weakens if proteotoxic stress is negligible or relief preserves abnormal clones without improving useful function.",
+      "identity_note": "Use sodium 4-phenylbutyrate. The public phenylbutyrate signature has parent-family support; its experimental salt and lot remain unresolved."
+    },
+    {
+      "drug": "niacin",
+      "display_name": "Niacin (nicotinic acid)",
+      "role": "lead",
+      "branch": "restoration",
+      "mechanism": "Supply NAD+ to support SIRT2-dependent preservation of useful residual BUBR1 protein.",
+      "parent_chembl_id": "CHEMBL573",
+      "medicinal_chembl_id": "CHEMBL573",
+      "comparison_endpoint": "Useful residual BUBR1 abundance and checkpoint function.",
+      "inference_to_examine": "Niacin-induced NAD+ changes can engage the BUBR1 stabilization pathway shown in separate studies.",
+      "prediction_boundary": "The restoration rationale weakens when useful residual protein approaches zero or NAD+ availability is nonlimiting.",
+      "identity_note": "Nicotinic acid is distinct from nicotinamide. The current nomination uses a prescription extended-release formulation; its NAD+ response is not assumed identical to the cited human study."
+    },
+    {
+      "drug": "pioglitazone",
+      "display_name": "Pioglitazone",
+      "role": "contrasting_comparator",
+      "branch": "mitigation",
+      "compares_with": "sodium phenylbutyrate",
+      "mechanism": "Support mitochondrial function through PPAR-gamma / PGC-1alpha-associated remodeling.",
+      "parent_chembl_id": "CHEMBL595",
+      "medicinal_chembl_id": "CHEMBL1715",
+      "comparison_endpoint": "Mitochondrial function and energy-related cellular stress.",
+      "inference_to_examine": "Mitochondrial effects reported in trisomy-21 fibroblasts extend beyond chromosome-21-specific biology.",
+      "prediction_boundary": "The rationale weakens if the observed rescue depends entirely on chromosome-21-specific mechanisms.",
+      "identity_note": "The medicinal record is pioglitazone hydrochloride; public signature evidence is retained under the parent compound name."
+    },
+    {
+      "drug": "gentamicin",
+      "display_name": "Gentamicin",
+      "role": "contrasting_comparator",
+      "branch": "restoration",
+      "compares_with": "niacin",
+      "mechanism": "Permit premature-stop readthrough and production of a longer, potentially functional BUBR1 protein.",
+      "parent_chembl_id": "CHEMBL6067485",
+      "medicinal_chembl_id": "CHEMBL6067484",
+      "comparison_endpoint": "Functional full-length or longer BUBR1 production and checkpoint function.",
+      "inference_to_examine": "Readthrough demonstrated in other disease contexts can generate useful BUBR1 products from the local stop context.",
+      "prediction_boundary": "The rationale weakens with very low surviving transcript or nonfunctional readthrough products.",
+      "identity_note": "Use the gentamicin medicinal mixture, with sulfate formulation specified; do not silently substitute an isolated congener."
+    }
+  ],
+  "comparison_policy": {
+    "scope": "Exactly these four active candidates, comprising two leads and two contrasting comparators.",
+    "interpretation": "Fixed candidate roles for the next analysis, not a predetermined efficacy result or a proposed combination regimen.",
+    "evaluation_dimensions": [
+      "Causal mechanism and expected intervention direction",
+      "Relevance and strength of supporting model evidence",
+      "Agreement and disagreement in public computational evidence",
+      "Identity and medicinal formulation",
+      "Sensitivity to assumptions and conditions that reverse the prediction"
+    ],
+    "aggregation": "Use mechanism-specific endpoints and report evidence layers separately. No composite efficacy score or inferred probability of benefit.",
+    "signature_use": "Supporting or opposing evidence; missing coverage remains missing. Generic expression reversal is not required for a post-translational or readthrough hypothesis.",
+    "revision_rule": "Retain this version. Revise roles or membership explicitly if new mechanism, identity or comparative evidence changes the conclusion; record the reason in a new comparison version."
+  },
+  "supporting_evidence": {
+    "broad_screen_review": "outputs/drug_screen_c/REVIEW.md",
+    "complete_signature_ranking": "outputs/drug_screen_c/signatures/drug_rankings.json",
+    "joined_evidence_matrix": "outputs/drug_screen_c/evidence_matrix.json",
+    "target_ranking": "outputs/drug_screen_c/targets/ranked_drugs.json",
+    "candidate_identity_audit": "outputs/contest_hypotheses/screen_evidence.json",
+    "extended_literature_review": "outputs/contest_hypotheses/REVIEW.md",
+    "other_candidate_status": "Retained in the supporting comparison and full screen; outside the active four-drug analysis."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-17",
+  "purpose": "Literature-based theoretical nominations for the contest. Evidence of completed experimental rescue is not an eligibility prerequisite. These nominations complement the broad screen; ranks are qualitative research judgments, not calibrated probabilities.",
+  "ranking_scope": "Protein restoration and selected downstream mechanisms researched by this agent; other team research on phenylbutyrate and mTOR may outrank these in the combined shortlist.",
+  "leads": [
+    {
+      "rank_in_this_review": 1,
+      "drug": "Niacin (nicotinic acid; prescription extended-release formulation)",
+      "chembl_id": "CHEMBL573",
+      "branch": "Residual BUBR1 stabilization through NAD+/SIRT2",
+      "evidence_chain": [
+        "North et al. directly showed that SIRT2 deacetylates BUBR1 K668, reducing ubiquitination/proteasomal degradation; NMN increased BUBR1 abundance, and genetic SIRT2 overexpression extended lifespan in male BubR1-hypomorphic mice.",
+        "Pirinen et al. directly showed that nicotinic acid raises blood NAD+ and restores low muscle NAD+ in adults with mitochondrial myopathy.",
+        "Inference: approved nicotinic acid could substitute as an upstream NAD+ booster and preserve residual functional BUBR1. The drug-to-BUBR1 link is inferred across studies, not measured in MVA."
+      ],
+      "approval": {
+        "status": "current_prescription_formulation_verified",
+        "formulation": "Niacin extended-release oral tablets",
+        "label_updated": "2026-02-25",
+        "indication": "Specified lipid disorders and related indications",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd60fe81-3d54-4a29-9502-601be89c575e&version=8"
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4194088/",
+        "https://doi.org/10.1016/j.cmet.2020.04.008",
+        "https://doi.org/10.1016/j.bbrc.2014.09.128",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887387/"
+      ],
+      "contradictions_and_dependencies": [
+        "Nicotinamide is chemically distinct: in the North study it reduced BUBR1 under the tested sirtuin-inhibitory cell conditions. Do not substitute niacinamide or label all vitamin B3 forms equivalent.",
+        "Stabilization requires a residual protein substrate with useful function; it does not replace a missing C-terminal domain or repair a functionally defective stable mutant.",
+        "North's SIRT2-transgenic lifespan benefit was sex-dependent; small size and many senescence phenotypes persisted. NMN treatment and SIRT2 transgenic lifespan experiments were different interventions.",
+        "SIRT2 also deacetylates BUBR1 K250 in another primary study, with different cell-cycle consequences. K668 stabilization alone is an incomplete description of total SIRT2 action.",
+        "NAD+ elevation may be limited by tissue precursor metabolism or a nonlimiting starting NAD+ pool. Prescription ER formulation has a different exposure profile from the niacin preparation in the mitochondrial-myopathy study."
+      ],
+      "screen_context": {"same_cell_score": 0.018220229840299244, "same_cell_count": 1, "hipsc_cross_cell_score": -0.002685872877437335, "interpretation": "weak and mixed descriptive support, not a nomination gate"},
+      "discriminating_prediction": "A residual-protein kinetic model predicts benefit increasing with residual synthesis and decreasing with NAD+ saturation; no abundance rescue when synthesis is zero. Model K668 stabilization separately from checkpoint timing, and compare NAD salvage/pathway expression across public proxy cells. Direct niacin-to-BUBR1 docking would not test this mechanism."
+    },
+    {
+      "rank_in_this_review": 2,
+      "drug": "Gentamicin",
+      "branch": "Premature-stop readthrough",
+      "evidence_chain": [
+        "Aminoglycoside action can permit near-cognate tRNA incorporation at premature stops.",
+        "Malik et al. measured heterogeneous dystrophin increases in a small human nonsense-mutation DMD study.",
+        "Inference: a BUB1B nonsense transcript that survives NMD could yield a longer protein with useful checkpoint function after readthrough."
+      ],
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/20517938/", "https://pubmed.ncbi.nlm.nih.gov/22479203/", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098639/"],
+      "approval_url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?ApplNo=062366&event=overview.process",
+      "contradictions_and_dependencies": ["RNA depletion, non-native residue incorporation and cytosolic exposure can limit useful product.", "Sequence context matters and human DMD study did not establish simple stop-codon or +4-base rules.", "Do not use the retracted 2017 gentamicin-B1 paper (PMID 28289221) as positive support."],
+      "discriminating_prediction": "Rank the actual local stop context against published reporter sequences; model residual transcript times readthrough rate times functional fraction. Compare structures of plausible readthrough amino-acid products and use ribosome-targeted simulations only with a credible molecular model."
+    },
+    {
+      "rank_in_this_review": 3,
+      "drug": "Ruxolitinib",
+      "chembl_id": "CHEMBL1789941",
+      "branch": "Downstream inflammatory senescence mitigation",
+      "evidence_chain": ["Baker et al. showed that eliminating senescent cells in BubR1-hypomorphic mice delayed tissue dysfunction.", "Xu et al. showed JAK1/2 inhibition with ruxolitinib suppresses inflammatory SASP and improves physical function in naturally aged mice.", "Inference: JAK1/2 inhibition could attenuate an inflammatory consequence of BUBR1 insufficiency, without correcting chromosome segregation."],
+      "sources": ["https://www.nature.com/articles/nature10600", "https://pmc.ncbi.nlm.nih.gov/articles/PMC4655580/"],
+      "approval_url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+      "contradictions_and_dependencies": ["Xu's mice were naturally aged, not BUB1B mutant; senescent-cell abundance did not significantly change.", "Reduced inflammation is useful only if this downstream program is active; immune suppression and cytopenias oppose some intended benefits.", "The evidence matrix maps S-ruxolitinib to the same parent; the stereoisomer requires exclusion or explicit identity resolution before pooling with the approved R drug."],
+      "screen_context": {"same_cell_score": 0.019186747404109576, "same_cell_count": 1, "hipsc_cross_cell_score": -0.000012740834778559229},
+      "discriminating_prediction": "Test signed IL6/JAK/STAT/SASP module reversal independently of proliferation and cell-death modules. Known JAK binding can anchor structural controls; BUBR1 binding is unnecessary for this mechanism."
+    },
+    {
+      "rank_in_this_review": 4,
+      "drug": "Acetylcysteine (NAC)",
+      "chembl_id": "CHEMBL600",
+      "branch": "Oxidative-stress amplification mitigation",
+      "evidence_chain": ["Nago et al. found oxidative stress in Sod1-deficient mouse oocytes accompanied reduced kinetochore BUBR1 and segregation errors.", "NAC reduced segregation errors in that model.", "Inference: reducing oxidative stress may prevent additional checkpoint impairment on top of BUB1B loss, without replacing BUBR1."],
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/39845481/", "https://onlinelibrary.wiley.com/doi/full/10.1002/rmb2.12622"],
+      "approval_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021539s021lbl.pdf",
+      "contradictions_and_dependencies": ["Evidence is a Sod1-deficient meiotic model exposed to culture oxidative stress, not congenital BUB1B-deficient mitosis.", "Protection of a residual checkpoint cannot supply an absent core checkpoint component; antioxidant effects on malignant cells require a separate endpoint."],
+      "screen_context": {"same_cell_score": 0.012158459966367982, "same_cell_count": 1, "hipsc_cross_cell_score": 0.0000207907003162865},
+      "discriminating_prediction": "Stratify public BUB1B proxy signatures by oxidative-stress and glutathione modules and predict benefit only in the high-oxidative-stress subgroup; compare segregation endpoints to general viability."
+    },
+    {
+      "rank_in_this_review": 5,
+      "drug": "Azithromycin",
+      "branch": "Alternative readthrough comparator",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/26620677/", "https://pmc.ncbi.nlm.nih.gov/articles/PMC8125088/"],
+      "approval_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/050710s054lbl.pdf",
+      "rationale": "Retain an approved mechanistically distinct readthrough comparator, below gentamicin for direct readthrough evidence; better tolerability does not establish better rescue.",
+      "contradictions_and_dependencies": ["The later PCD reporter study found modest context-dependent effects and potential normalization artifacts.", "Broad-screen same-cell score is essentially zero and chemical source identifiers are unresolved; neither establishes nor rules out local readthrough."],
+      "discriminating_prediction": "Use the same stop-context and product-function analysis as gentamicin, with a separate model for macrolide exposure and mechanism."
+    }
+  ],
+  "exclusion_or_direction_notes": [
+    {"topic": "HSP90 inhibition", "reason": "Suijkerbuijk2010 found HSP90 inhibition destabilized selected MVA BUBR1 mutants, opposing residual-protein rescue.", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887387/"},
+    {"topic": "Generic senescence-signature reversal", "reason": "p53/p21 loss shortened lifespan and worsened muscle/fat deterioration in BubR1-hypomorphic mice. Suppressing every senescence-associated transcript is not a favorable signed intervention.", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3785294/"},
+    {"topic": "Sirolimus", "reason": "The p21 primary paper reports preliminary unpublished observations that rapamycin-fed BubR1 progeroid mice developed age-related phenotypes at similar rates to controls. This is pertinent negative evidence, with limited methodological detail, to weigh against specific mTOR-muscle evidence.", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3785294/"},
+    {"topic": "Metformin", "reason": "A primary high-dose culture study reports SAC deregulation and genotoxicity under low-glucose conditions. This is a context-specific adverse-direction result rather than a blanket conclusion at all exposures.", "source": "https://www.sciencedirect.com/science/article/abs/pii/S0278691522003271"}
+  ]
+}

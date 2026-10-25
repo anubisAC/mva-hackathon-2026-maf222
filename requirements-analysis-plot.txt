@@ -1,0 +1,3 @@
+# Optional figure rendering for the BUB1B comparison; core statistics use the standard library.
+matplotlib==3.11.2
+numpy==2.5.4

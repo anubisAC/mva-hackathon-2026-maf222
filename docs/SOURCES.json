@@ -1,0 +1,138 @@
+{
+  "challenge": [
+    "Sage Bionetworks. Rare Disease, Real Kid: MVA Hackathon 2026. Official instructions and methods template.",
+    "https://huggingface.co/spaces/SageBio/rare-disease-real-kid-mva-hackathon-2026"
+  ],
+  "ensembl": [
+    "Ensembl release 116: GRCh38 canonical coding reference.",
+    "https://ftp.ensembl.org/pub/release-116/gtf/homo_sapiens/"
+  ],
+  "hpo": [
+    "Human Phenotype Ontology release v2026-09-01: phenotype and disease associations.",
+    "https://github.com/obophenotype/human-phenotype-ontology/releases/tag/v2026-09-01"
+  ],
+  "gnomad": [
+    "gnomAD v4 browser dataset (gnomad_r4), GRCh38, retrieved October 20, 2026; public BUB1B gene reference.",
+    "https://gnomad.broadinstitute.org/gene/ENSG00000156970?dataset=gnomad_r4"
+  ],
+  "gnomad_an": [
+    "gnomAD v4.1: corrected allele numbers and joint callset denominators.",
+    "https://gnomad.broadinstitute.org/news/2024-04-gnomad-v4-1"
+  ],
+  "clinvar": [
+    "NCBI ClinVar: public GRCh38 VCF reference.",
+    "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/"
+  ],
+  "mva": [
+    "Suijkerbuijk et al. Molecular causes for BUBR1 dysfunction in the human cancer predisposition syndrome mosaic variegated aneuploidy. Cancer Research (2010).",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887387/"
+  ],
+  "pp2a": [
+    "Xu et al. BUBR1 recruits PP2A via the B56 family of targeting subunits to promote chromosome congression. Biology Open (2013).",
+    "https://pubmed.ncbi.nlm.nih.gov/23789096/"
+  ],
+  "pseudo": [
+    "BUBR1 pseudokinase-domain, PP2A recruitment and checkpoint-silencing experiments. Cell Reports (2020).",
+    "https://www.sciencedirect.com/science/article/pii/S2211124720313863"
+  ],
+  "north": [
+    "North et al. SIRT2 induces the checkpoint kinase BubR1 to increase lifespan. EMBO Journal (2014).",
+    "https://pubmed.ncbi.nlm.nih.gov/24825348/"
+  ],
+  "pirinen": [
+    "Pirinen et al. Niacin cures systemic NAD+ deficiency and improves muscle performance in adult-onset mitochondrial myopathy. Cell Metabolism (2020).",
+    "https://doi.org/10.1016/j.cmet.2020.04.008"
+  ],
+  "nawa": [
+    "Nawa et al. Elimination of protein aggregates prevents premature senescence in human trisomy 21 fibroblasts. PLOS ONE (2019).",
+    "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219592"
+  ],
+  "hirata": [
+    "Hirata et al. Protein aggregation and apoptosis in trisomy 13 and 21 neurons. Scientific Reports (2020).",
+    "https://www.nature.com/articles/s41598-020-70362-x"
+  ],
+  "mollo": [
+    "Mollo et al. Pioglitazone and mitochondrial function in trisomy-21 fibroblasts (2019).",
+    "https://pubmed.ncbi.nlm.nih.gov/31316549/"
+  ],
+  "malik": [
+    "Malik et al. Gentamicin-induced readthrough in Duchenne muscular dystrophy. Annals of Neurology (2010).",
+    "https://pubmed.ncbi.nlm.nih.gov/20517938/"
+  ],
+  "roy": [
+    "Roy et al. Near-cognate tRNA selection and readthrough-product identity (2016).",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098639/"
+  ],
+  "rms": [
+    "FOXM1/BUB1B dependency experiments in rhabdomyosarcoma models (2012).",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3500453/"
+  ],
+  "muscle": [
+    "Allele- and tissue-dependent consequences of BubR1 insufficiency, including muscle mTORC1 signaling. JCI (2019/2020).",
+    "https://www.jci.org/articles/view/126863"
+  ],
+  "apc": [
+    "Pharmacological APC/C inhibition and mitotic exit. Nature (2014).",
+    "https://www.nature.com/articles/nature13660"
+  ],
+  "apcin": [
+    "Checkpoint-dependent paradoxical mitotic exit with apcin. Nature Chemical Biology (2020).",
+    "https://www.nature.com/articles/s41589-020-0495-z"
+  ],
+  "chembl": [
+    "ChEMBL public drug, target and mechanism database; cached release metadata: ChEMBL 37.",
+    "https://www.ebi.ac.uk/chembl/"
+  ],
+  "reactome": [
+    "Reactome pathway database; analysis used release 97.",
+    "https://reactome.org/download-data"
+  ],
+  "perturb": [
+    "PerturbSeqr public drug, knockout and knockdown signature downloads.",
+    "https://perturbseqr.maayanlab.cloud/download"
+  ],
+  "pba_label": [
+    "DailyMed: BUPHENYL, sodium phenylbutyrate tablets/powder, US prescription label.",
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=463a36fa-3eb2-4326-8bd0-c8c7a11bca3a"
+  ],
+  "niacin_label": [
+    "DailyMed: prescription niacin extended-release tablets, US label, version 8.",
+    "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd60fe81-3d54-4a29-9502-601be89c575e&version=8"
+  ],
+  "pio_label": [
+    "DailyMed: pioglitazone hydrochloride tablets, US prescription label.",
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4483b1c6-7095-4a63-8128-ac2d91e11040"
+  ],
+  "gent_label": [
+    "Drugs@FDA: gentamicin sulfate injection, ANDA 062366; prescription marketing status.",
+    "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?ApplNo=062366&event=overview.process"
+  ],
+  "revel": [
+    "REVEL v1.3 chromosome-15 precomputed archive.",
+    "https://zenodo.org/records/7072866"
+  ],
+  "cadd": [
+    "CADD v1.7 GRCh38 public precomputed SNVs.",
+    "https://cadd.bihealth.org/download"
+  ],
+  "alphamissense": [
+    "AlphaMissense official hg38 precomputed predictions.",
+    "https://github.com/google-deepmind/alphamissense"
+  ],
+  "spliceai": [
+    "Ensembl MANE v1.4 SpliceAI tables and 50-bp distance specification.",
+    "https://ftp.ensembl.org/pub/data_files/homo_sapiens/GRCh38/variation_plugins/README"
+  ],
+  "reference": [
+    "NCBI GRCh38 no-alt plus hs38d1 analysis reference, GCA_000001405.15.",
+    "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/"
+  ],
+  "minimap": [
+    "Minimap2 v2.31 official source and documentation.",
+    "https://github.com/lh3/minimap2/tree/v2.31"
+  ],
+  "markdup": [
+    "Samtools coordinate duplicate-marking documentation.",
+    "https://www.htslib.org/doc/samtools-markdup.html"
+  ]
+}

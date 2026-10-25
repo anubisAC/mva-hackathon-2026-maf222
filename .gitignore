@@ -1,0 +1,12 @@
+data/
+outputs/
+references/
+__pycache__/
+*.py[cod]
+.venv/
+.analysis_dependencies/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+*.log

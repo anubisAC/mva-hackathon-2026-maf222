@@ -1,0 +1,9 @@
+{
+  "name": "MVA literature genes",
+  "species": "Homo sapiens",
+  "context": "Five disease-associated genes curated from human germline studies. Not patient RNA-seq and not differential expression; exploratory regulatory overlap only.",
+  "direction": "undirected",
+  "genes": ["BUB1B", "CEP57", "TRIP13", "CENATAC", "MAD1L1"],
+  "source": "See config/genes.json for per-gene primary publications.",
+  "evidence_type": "literature_gene_set"
+}

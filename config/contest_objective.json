@@ -1,0 +1,32 @@
+{
+  "objective": "Identify suitable therapeutic targets from the conditional variant-to-phenotype mechanism, then evaluate medicines that can produce the desired target intervention.",
+  "user_clarified_on": "2026-10-20",
+  "nomination_requirements": [
+    "Identify the drug and an approved medicinal formulation.",
+    "Explain the causal chain, intervention direction and relevant model evidence.",
+    "Distinguish established mechanistic links from the proposed inference.",
+    "Describe the main competing explanation or condition that changes the prediction."
+  ],
+  "not_required_before_nomination": [
+    "Demonstrated benefit in this patient",
+    "Experimental functional rescue",
+    "Binding to either BUB1B allele",
+    "Positive generic signature reversal",
+    "Significant undirected pathway overlap",
+    "Completed docking or simulation"
+  ],
+  "ranking_policy": "Prioritize target hypotheses by variant mechanism, phenotype relevance, intervention direction and falsifiable predictions. Model healthy-tissue rescue and tumor control separately. No drug has a reserved lead position and no composite efficacy probability is assigned.",
+  "discovery_policy": "Select and test molecular interventions before selecting drugs. Use literature to specify and challenge mechanistic relationships, public experiments to fit and test models, and broad drug-target activity data to identify compounds. Prior drug screens remain supporting evidence.",
+  "next_stage": "Calibrate the variant-mechanism and PP2A-B56/Aurora B models with public functional measurements, then acquire quantitative drug-target activities and evaluate explicit exposure scenarios in separate healthy-tissue and tumor arms.",
+  "current_decision": "outputs/target_first_2026-10-20_v2/FRAMEWORK.md",
+  "main_comparison_fixed_on": "2026-10-19",
+  "previous_decision": "outputs/main_comparison_2026-10-19/COMPARISON.md",
+  "previous_comparison_config": "config/main_comparison.json",
+  "active_framework_config": "config/target_first_framework.json",
+  "objective_arms": [
+    "healthy_tissue_rescue",
+    "tumor_control"
+  ],
+  "framework_status": "initial_unfitted_prototype_and_target_hypotheses",
+  "prior_four_drug_roles": "historical_comparison_only_no_reserved_leads"
+}

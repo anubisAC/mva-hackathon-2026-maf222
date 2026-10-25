@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "mechanism_seed_genes": ["BUB1B"],
+  "seed_rationale": "Conditional BUB1B loss of function hypothesis from prior local variant work. This is not a confirmed causal diagnosis or a measured expression signature.",
+  "pathway_min_genes": 5,
+  "pathway_max_genes": 200,
+  "sensitivity_max_genes": [100, 500],
+  "primary_target_policy": "Only source-labelled direct interactions with human SINGLE PROTEIN targets. Protein-family and complex components remain contextual associations, not independently proven binding targets.",
+  "degree_bin_upper_limits": [1, 2, 4, 8, 16, 1000000000],
+  "checkpoint_support_genes": ["BUB1B", "BUB1", "BUB3", "MAD1L1", "MAD2L1", "TTK", "AURKB"],
+  "inhibitory_actions": ["INHIBITOR", "ANTAGONIST", "NEGATIVE ALLOSTERIC MODULATOR", "DEGRADER", "BLOCKER"],
+  "direction_sources": [
+    {"url": "https://reactome.org/content/detail/R-HSA-69618", "scope": "Spindle checkpoint function and component roles; undirected pathway membership alone does not specify therapeutic direction."},
+    {"url": "https://pubmed.ncbi.nlm.nih.gov/20624902/", "scope": "Mps1 inhibition disrupts spindle-checkpoint signalling; supports flagging inhibition as a potential conflict with normal-cell restoration."},
+    {"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3518220/", "scope": "Bub1 kinase and Aurora B roles in checkpoint signalling and chromosome error correction. More activity is not automatically beneficial."}
+  ],
+  "statistical_scope": "All assessable phase-4 parent drug families enter both nominal and degree-stratified overlap tests and separate BH corrections. Degree is the number of drug families with an annotated direct target, not protein-interaction-network degree. No p-value estimates efficacy.",
+  "frozen_before_screen": true
+}

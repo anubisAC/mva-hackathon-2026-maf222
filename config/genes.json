@@ -1,0 +1,14 @@
+{
+  "assembly": "GRCh38",
+  "description": "Hypothesis-led initial panel, not comprehensive genome-wide diagnosis. Public literature determines genes; no candidate variant coordinates are encoded.",
+  "genes": [
+    {"symbol": "BUB1B", "role": "MVA spindle checkpoint", "source": "https://pubmed.ncbi.nlm.nih.gov/15475955/"},
+    {"symbol": "CEP57", "role": "MVA centrosome and microtubules", "source": "https://doi.org/10.1038/ng.822"},
+    {"symbol": "TRIP13", "role": "MVA spindle checkpoint", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5493194/"},
+    {"symbol": "CENATAC", "role": "Constitutional aneuploidy and minor spliceosome", "source": "https://pubmed.ncbi.nlm.nih.gov/34009673/"},
+    {"symbol": "MAD1L1", "role": "MVA spindle checkpoint", "source": "https://pubmed.ncbi.nlm.nih.gov/36322655/"},
+    {"symbol": "SLF2", "role": "Related differential: Atelis syndrome and mosaic variegated hyperploidy", "source": "https://www.nature.com/articles/s41467-022-34349-8"},
+    {"symbol": "SMC5", "role": "Related differential: Atelis syndrome and mosaic variegated hyperploidy", "source": "https://www.nature.com/articles/s41467-022-34349-8"}
+  ],
+  "next_panel_review": "Add BUB1, MAD2L1BP and CEP192 after primary-evidence curation; then broaden to unbiased genome-wide annotation. Absence from this starter panel is not evidence against a gene."
+}
